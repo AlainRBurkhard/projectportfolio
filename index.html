@@ -47,7 +47,82 @@ Thanks!</p>
 										<ul class="actions">
 											<li><a href="#" class="button big">About me</a></li>
 										</ul>
-									</div>
+<button id="about-me-btn">About me</button>
+
+<div id="popup">
+  <h2>About me</h2>
+  <img src="your-image-url-here" alt="Your image">
+  <p>Write about yourself here</p>
+  <button id="close-btn">Close</button>
+</div>
+
+<style>
+  /* CSS code for the pop-up window */
+  #popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 100%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    display: none;
+  }
+
+  #popup h2 {
+    margin-top: 0;
+  }
+
+  #popup img {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  #popup p {
+    margin-bottom: 20px;
+  }
+
+  #close-btn {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
+<script>
+  // JavaScript code for creating the pop-up window
+  var aboutMeBtn = document.getElementById("about-me-btn");
+  var popup = document.getElementById("popup");
+  aboutMeBtn.addEventListener("click", function() {
+    popup.style.display = "block";
+  });
+  popup.querySelector("#close-btn").addEventListener("click", function() {
+    popup.style.display = "none";
+  });
+</script>
+
+									
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 									<span class="image object">
 										<img src="images/helloworld.jpg" alt="" />
 									</span>
