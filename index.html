@@ -49,14 +49,16 @@ Feel invited to connect with me at any of the links available.<br/>
 Thanks!</p>
 										
 <button id="about-me-btn">About me</button>
+<button id="cv-btn">My CV</button>
+
 
 <div id="popup">
   <img src="Screenshot_20230311-105925 (1).jpg" alt="Your image">
-  <p>Hey! &#128075;</p> 
+  <p>Hi there! &#128075;</p> 
   <p align="justify">I'm a data lover and tech enthusiast, I'm 28 years old, Swiss/Brazil made.
    I have a degree in civil engineering, but I'm now on the hunt for exciting opportunities in the data field.</p>
   <p align="justify">I've had many different 
-  work expierence over the years, and they've all taught me one lesson:  it's not always about having the answers; what's most important is knowing how and where to find them. That has given me a ton of confidence when it comes to solving problems and has shown me my value as a worker.</p>
+  work experience over the years, and they've all taught me one lesson:  it's not always about having the answers; what's most important is knowing how and where to find them. That has given me a ton of confidence when it comes to solving problems and has shown me my value as a worker.</p>
   <p align="justify">When I'm not working, I'm hanging out with my small family, which includes my partner and our two adorable baby cats 👸 🐈. 
   I love being around people with a good sense of humor and helping out those around me.
   My hobbies are all over the place: playing soccer and volleyball, PC gaming, cycling, climbing, hiking, going to the beach,
@@ -106,7 +108,12 @@ Thanks!</p>
 
 <script>
   // JavaScript code for creating the pop-up window
-  var aboutMeBtn = document.getElementById("about-me-btn");
+var aboutMeBtn = document.getElementById("about-me-btn");
+var cvBtn = document.getElementById("cv-btn");
+
+cvBtn.addEventListener("click", function() {
+  window.open("cv.pdf", "_blank");
+});
   var popup = document.getElementById("popup");
   aboutMeBtn.addEventListener("click", function() {
     popup.style.display = "block";
@@ -114,6 +121,7 @@ Thanks!</p>
   popup.querySelector("#close-btn").addEventListener("click", function() {
     popup.style.display = "none";
   });
+	
 </script>
 
 
