@@ -107,23 +107,22 @@ Thanks!</p>
 </style>
 
 <script>
-  // JavaScript code for creating the pop-up window
-var aboutMeBtn = document.getElementById("about-me-btn");
-var cvBtn = document.getElementById("cv-btn");
-var popup = document.getElementById("popup");
-
-cvBtn.addEventListener("click", function() {
-  var cvWindow = window.open("CV.pdf", "_blank", "width=800,height=600");
-  cvWindow.document.write('<embed width="100%" height="100%" src="cv.pdf" type="application/pdf">');
-});
+  var aboutMeBtn = document.getElementById("about-me-btn");
+  var cvBtn = document.getElementById("cv-btn");
   var popup = document.getElementById("popup");
+
   aboutMeBtn.addEventListener("click", function() {
     popup.style.display = "block";
   });
+
+  cvBtn.addEventListener("click", function() {
+    var cvWindow = window.open("cv.pdf", "_blank", "width=800,height=600");
+    cvWindow.document.write('<embed width="100%" height="100%" src="cv.pdf" type="application/pdf">');
+  });
+
   popup.querySelector("#close-btn").addEventListener("click", function() {
     popup.style.display = "none";
   });
-	
 </script>
 
 
